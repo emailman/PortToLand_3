@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.dtcc.klochel.porttoland.MainActivity">
+
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="161dp"
+        android:text="Convert Interest Rates"
+        android:textColor="@android:color/background_dark"
+        android:textSize="36sp"
+        android:textStyle="normal|bold" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/tvResult"
+        android:layout_alignRight="@+id/tvResult"
+        android:layout_below="@+id/textTitle"
+        android:layout_marginTop="67dp"
+        android:text="Rate to Convert %"
+        android:textSize="30sp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editRate">
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="41dp"
+        android:onClick="HandleClick"
+        android:text="Convert"
+        android:textSize="36sp"
+        android:layout_below="@+id/rbMonthly"
+        android:layout_alignRight="@+id/tvResult"
+        android:layout_alignEnd="@+id/tvResult" />
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button"
+        android:layout_marginLeft="42dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="118dp"
+        android:layout_toEndOf="@+id/radioGroup"
+        android:layout_toRightOf="@+id/radioGroup"
+        android:layout_weight="1"
+        android:text="Press Convert for % Result"
+        android:textSize="36sp" />
+
+    <EditText
+        android:id="@+id/editRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView"
+        android:layout_marginLeft="52dp"
+        android:layout_marginStart="52dp"
+        android:layout_toEndOf="@+id/textView"
+        android:layout_toRightOf="@+id/textView"
+        android:width="100dp"
+        android:inputType="numberDecimal"
+        android:text="0.0" />
+
+    <RadioButton
+        android:id="@+id/rbMonthly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/rbYearly"
+        android:layout_alignStart="@+id/rbYearly"
+        android:layout_below="@+id/rbYearly"
+        android:layout_marginTop="14dp"
+        android:layout_weight="1"
+        android:text="Monthly to Yearly"
+        android:textColorLink="?android:attr/colorPrimary"
+        android:textSize="24sp" />
+
+    <RadioButton
+        android:id="@+id/rbYearly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="26dp"
+        android:layout_weight="1"
+        android:text="Yearly to Monthly"
+        android:textColorLink="?android:attr/colorPrimary"
+        android:textSize="24sp"
+        android:layout_below="@+id/radioGroup"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView" />
+
+</RelativeLayout>
